@@ -1,4 +1,5 @@
 import React from "react";
+import { useSearchParams } from "react-router-dom";
 import ShareButton from "./Components/shareButton";
 import backgroundVideo from "../public/background.mp4";
 import backgroundVideo_mobile from "../public/background-mobile.mp4";
@@ -6,6 +7,9 @@ import CountDown from "./Components/CountDown";
 
 const App = () => {
   const deepavaliDate = new Date("2025-10-20T00:00:00");
+
+  const [searchParams] = useSearchParams();
+  const name = searchParams.get("name") || "";
 
   return (
     <div className="relative w-full h-screen overflow-hidden bg-[linear-gradient(135deg,#33004d,#170425,#0a0014)]">
@@ -47,7 +51,7 @@ const App = () => {
                   drop-shadow-[0_6px_6px_rgba(0,0,0,0.2)]
                   text-center"
               >
-                Stephen Raj M! <span className="text-neutral-800">🪔</span>
+                {name ? `${name}!` : ""} <span className="text-neutral-800">🪔</span>
               </h2>
             </div>
 
