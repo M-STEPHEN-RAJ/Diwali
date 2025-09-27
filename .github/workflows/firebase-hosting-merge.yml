@@ -21,3 +21,4 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DIWALI_2025 }}
           channelId: live
           projectId: diwali-2025
+          entryPoint: ./Frontend 
