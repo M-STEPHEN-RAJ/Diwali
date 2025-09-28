@@ -4,7 +4,10 @@ import ShareButton from "./Components/ShareButton";
 import backgroundVideo from "/background.mp4";
 import backgroundVideo_mobile from "/background-mobile.mp4";
 import CountDown from "./Components/CountDown";
+import Footer from "./Components/Footer";
+import HeaderAd from "./Components/HeaderAd";
 import { Toaster } from "react-hot-toast";
+import NavbarAd from "./Components/NavbarAd";
 
 const App = () => {
   const deepavaliDate = new Date("2025-10-20T00:00:00");
@@ -15,6 +18,7 @@ const App = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden bg-[linear-gradient(135deg,#33004d,#170425,#0a0014)]">
       <Toaster/>
+      
       {/* Video Background */}
       <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay muted loop playsInline>
         <source src={backgroundVideo_mobile} media="(max-width: 767px)" type="video/mp4" />
@@ -23,12 +27,16 @@ const App = () => {
 
       {/* Overlay content */}
       <div className="relative z-10 w-full h-full flex justify-center px-5 py-5">
+        
         <div className="relative flex flex-col items-center max-w-[1400px] w-full">
+          
 
           {/* Share Button */}
-          <div className="absolute w-full flex justify-end items-center mb-4">
+          <div className="w-full flex justify-end items-center mb-4">
             <ShareButton />
           </div>
+
+          <NavbarAd />
 
           {/* Main content */}
           <div className="flex flex-col justify-center items-center gap-8 py-5 w-full h-full">
@@ -57,6 +65,8 @@ const App = () => {
               </h2>
             </div>
 
+            <HeaderAd />
+
             <CountDown date = {deepavaliDate} />
 
             {/* Message box */}
@@ -66,6 +76,8 @@ const App = () => {
                 happiness to your life!"
               </p>
             </div>
+
+            <Footer />
 
           </div>
         </div>
