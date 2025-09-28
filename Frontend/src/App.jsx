@@ -1,8 +1,8 @@
 import React from "react";
 import { useSearchParams } from "react-router-dom";
 import ShareButton from "./Components/ShareButton";
-import backgroundVideo from "../public/background.mp4";
-import backgroundVideo_mobile from "../public/background-mobile.mp4";
+import backgroundVideo from "/background.mp4";
+import backgroundVideo_mobile from "/background-mobile.mp4";
 import CountDown from "./Components/CountDown";
 import { Toaster } from "react-hot-toast";
 
