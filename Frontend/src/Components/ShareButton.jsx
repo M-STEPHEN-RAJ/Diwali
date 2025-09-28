@@ -49,8 +49,10 @@ const ShareButton = () => {
     const baseUrl = window.location.origin + window.location.pathname;
     const finalUrl = `${baseUrl}?name=${encodeURIComponent(userName.trim())}`;
 
+    const message = `${finalUrl}\n\nHappy Diwali! \n\nMay the festival of lights bring countless moments of joy and happiness to your life!\n\nCheck this out!`;
+
     if (selectedPlatform === "whatsapp") {
-      window.open(`https://wa.me/?text=${encodeURIComponent(finalUrl)}`, "_blank");
+      window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, "_blank");
     } else if (selectedPlatform === "facebook") {
       window.open(
         `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(finalUrl)}`,
@@ -131,6 +133,11 @@ const ShareButton = () => {
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
               placeholder="Your Name"
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  confirmShare();
+                }
+              }}
               className="w-[95%] px-4 py-1.5 text-sm border rounded-full text-black outline-none mx-auto"
             />
             <div className="flex gap-3 justify-end mt-3 text-sm font-medium">
