@@ -10,7 +10,7 @@
 }
 
 .shiny-text {
-  background: linear-gradient(90deg, #ffec80, #ff9307, #ffd900, #ffec80);
+  background: linear-gradient(90deg, #fff, #ffc4e3 90%, #d396ff 90%, #ffc8a1 90%, #fff3ae, #fff);
   background-size: 200% 100%;
   color: transparent;
   -webkit-background-clip: text;
