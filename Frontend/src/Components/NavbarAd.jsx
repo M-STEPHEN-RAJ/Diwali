@@ -16,7 +16,8 @@ const NavbarAd = ({ slot }) => {
            data-ad-client="ca-pub-9416531594291630"   // your AdSense client ID
            data-ad-slot={slot}                         // pass a unique slot for navbar
            data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
+           data-full-width-responsive="true"
+           data-adtest="on"></ins>
     </div>
   );
 };

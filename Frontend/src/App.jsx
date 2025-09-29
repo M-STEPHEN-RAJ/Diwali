@@ -36,7 +36,7 @@ const App = () => {
             <ShareButton />
           </div>
 
-          <NavbarAd />
+          <NavbarAd slot="1234567890"/>
 
           {/* Main content */}
           <div className="flex flex-col justify-center items-center gap-8 py-5 w-full h-full">
