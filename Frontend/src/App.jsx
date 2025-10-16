@@ -4,10 +4,7 @@ import ShareButton from "./Components/ShareButton";
 import backgroundVideo from "/background.mp4";
 import backgroundVideo_mobile from "/background-mobile.mp4";
 import CountDown from "./Components/CountDown";
-import Footer from "./Components/Footer";
-import HeaderAd from "./Components/HeaderAd";
 import { Toaster } from "react-hot-toast";
-import NavbarAd from "./Components/NavbarAd";
 
 const App = () => {
   const deepavaliDate = new Date("2025-10-20T00:00:00");
